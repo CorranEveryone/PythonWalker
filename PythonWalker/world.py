@@ -128,7 +128,7 @@ def encode_argument(arg, data):
         blue = int(hex_blue, 16)
 
         uint32_color = (red << 16) | (green << 8) | blue
-        bytes = uint32_color.to_bytes(4, byteorder='little')
+        bytes = uint32_color.to_bytes(4, byteorder='big')
     else:
         raise ValueError(f"Argument id {arg} is not a valid block argument.")
     
